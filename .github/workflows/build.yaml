@@ -1,0 +1,38 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency: ${{ github.ref }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the code 🗄
+        uses: actions/checkout@v4
+
+      - name: Setup bun 🍯
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: "1.3.5"
+
+      - name: Install deps 📦
+        run: bun install --frozen-lockfile
+
+      - name: Lint the code 🕵
+        run: bun lint
+
+      - name: Check the prettiness of the code 💅
+        run: bun prettier:check
+
+      - name: Build code 🛠
+        run: bun run build --baseHref=/prayer-screensaver/
+
+      - name: Deploy the demo website 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: dist
