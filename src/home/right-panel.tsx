@@ -1,12 +1,12 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
 const backgroundImages = [
-  "/background/madina-1.jpg",
-  "/background/madina-2.jpg",
-  "/background/madina-3.jpg",
-  "/background/madina-4.jpg",
-  "/background/makkah-1.jpg",
-  "/background/makkah-2.jpg",
+  "background/madina-1.jpg",
+  "background/madina-2.jpg",
+  "background/madina-3.jpg",
+  "background/madina-4.jpg",
+  "background/makkah-1.jpg",
+  "background/makkah-2.jpg",
 ];
 
 const ROTATE_INTERVAL_MS = 10_000;
