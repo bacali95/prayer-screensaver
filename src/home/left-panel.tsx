@@ -90,9 +90,14 @@ export function LeftPanel() {
           aria-hidden="true"
         />
       )}
+      <div className="absolute font-arabic flex flex-col top-10 right-10 text-white">
+        <span className="text-[60px] font-semibold">12:52</span>
+        <span className="text-[40px] leading-none">ذو الحجة 1444هـ</span>
+        <span className="text-[40px]">04.12.2025</span>
+      </div>
       <div className="absolute font-arabic flex flex-col bottom-10 left-1/2 -translate-x-1/2 text-white">
-        <span className="text-[80px] pr-10">الظهر</span>
-        <span className="text-[200px] leading-none">0:44:00</span>
+        <span className="text-[70px]">الظهر</span>
+        <span className="text-[200px] font-semibold leading-none">0:44:00</span>
       </div>
     </div>
   );
