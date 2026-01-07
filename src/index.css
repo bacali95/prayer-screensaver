@@ -1,9 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap");
+
 @import "tailwindcss";
+
+@font-face {
+  font-family: "HAFS Uthmanic";
+  src: url("/fonts/HAFS-Uthmanic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 @theme {
   --font-sans:
     "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --font-hafs: "HAFS Uthmanic", var(--font-sans);
+  --font-arabic: "Noto Sans Arabic", var(--font-sans);
 }
 
 html,
